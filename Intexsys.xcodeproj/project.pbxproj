@@ -55,6 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				3DBF878725BDAE9800D4A280 /* Application */,
+				3DBF878E25BDAF3000D4A280 /* Domain */,
+				3DBF879025BDAF5F00D4A280 /* Infrastructure */,
+				3DBF878F25BDAF5600D4A280 /* Presentation */,
 				3DBF878825BDAEA600D4A280 /* Resources */,
 			);
 			path = Intexsys;
@@ -73,6 +76,7 @@
 			children = (
 				3DBF877025BDAE3C00D4A280 /* AppDelegate.swift */,
 				3DBF877225BDAE3C00D4A280 /* AppSceneDelegate.swift */,
+				3DBF879125BDAF7600D4A280 /* DI */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -86,6 +90,90 @@
 				3DBF877825BDAE3E00D4A280 /* Preview Content */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3DBF878E25BDAF3000D4A280 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF879225BDAF8600D4A280 /* Entities */,
+				3DBF879325BDAF8D00D4A280 /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3DBF878F25BDAF5600D4A280 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF879825BDAFD200D4A280 /* Products */,
+				3DBF879725BDAFCB00D4A280 /* Extensions */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3DBF879025BDAF5F00D4A280 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF879525BDAFAA00D4A280 /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		3DBF879125BDAF7600D4A280 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		3DBF879225BDAF8600D4A280 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3DBF879325BDAF8D00D4A280 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF879425BDAF9A00D4A280 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3DBF879425BDAF9A00D4A280 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3DBF879525BDAFAA00D4A280 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF879625BDAFB200D4A280 /* Request */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3DBF879625BDAFB200D4A280 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		3DBF879725BDAFCB00D4A280 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3DBF879825BDAFD200D4A280 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
