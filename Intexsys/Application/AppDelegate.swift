@@ -19,6 +19,6 @@ extension AppDelegate: UIApplicationDelegate {
         _: UIApplication,
         didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        true
+        return true
     }
 }
