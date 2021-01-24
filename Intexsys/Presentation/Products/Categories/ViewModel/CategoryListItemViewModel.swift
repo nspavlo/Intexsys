@@ -19,6 +19,6 @@ struct CategoryListItemViewModel {
 
 extension CategoryListItemViewModel {
     init(_ category: Category) {
-        self.title = category.name
+        self.title = category.name 
     }
 }

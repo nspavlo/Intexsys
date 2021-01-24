@@ -287,8 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				3DBF87D825BDB97C00D4A280 /* CategoryContainerViewController.swift */,
-				3DBF87EA25BDBBB100D4A280 /* CategoryTableViewController.swift */,
 				3DBF87ED25BDBBED00D4A280 /* CategoryTableViewCell.swift */,
+				3DBF87EA25BDBBB100D4A280 /* CategoryTableViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,8 +296,8 @@
 		3DBF87DF25BDB9F000D4A280 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3DBF87E025BDBA0A00D4A280 /* CategoryListViewModel.swift */,
 				3DBF87E725BDBAB300D4A280 /* CategoryListItemViewModel.swift */,
+				3DBF87E025BDBA0A00D4A280 /* CategoryListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";

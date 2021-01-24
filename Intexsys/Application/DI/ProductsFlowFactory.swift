@@ -9,7 +9,21 @@ import UIKit
 
 // MARK: Initialization
 
-final class ProductsFlowFactory {}
+final class ProductsFlowFactory {
+    private let dispatcher: RequestDispatcher
+
+    init(dispatcher: RequestDispatcher) {
+        self.dispatcher = dispatcher
+    }
+}
+
+// MARK: Repositories
+
+extension ProductsFlowFactory {
+    func createProductRepository() -> ProductRepository {
+        RemoteProductRepository(dispatcher: dispatcher)
+    }
+}
 
 // MARK: Coordinators
 

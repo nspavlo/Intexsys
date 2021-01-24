@@ -19,6 +19,7 @@ extension CategoryTableViewCell: Reusable {}
 
 extension CategoryTableViewCell {
     func configure(with viewModel: CategoryListItemViewModel) {
+        accessoryType = .disclosureIndicator
         textLabel?.text = viewModel.title
     }
 }

@@ -35,7 +35,7 @@ typealias CategoryListViewModel = CategoryListViewModelInput & CategoryListViewM
 
 final class CategoryListController: CategoryListViewModel {
     var changeState: ((CategoryListViewModelState) -> Void)?
-    var showCategoryDetails: ((Category) -> Void)?
+    var showProduct: ((Category) -> Void)?
 
     private var items: [CategoryListItemViewModel] = []
     private var categories: Categories = []
@@ -67,7 +67,7 @@ extension CategoryListController {
     }
 
     func didSelectItem(at indexPath: IndexPath) {
-        showCategoryDetails?(categories[indexPath.row])
+        showProduct?(categories[indexPath.row])
     }
 }
 
