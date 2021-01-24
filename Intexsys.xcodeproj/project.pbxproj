@@ -17,6 +17,9 @@
 		3DBF87A225BDB0B900D4A280 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87A125BDB0B900D4A280 /* AppFlowCoordinator.swift */; };
 		3DBF87A725BDB17000D4A280 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87A625BDB17000D4A280 /* Environment.swift */; };
 		3DBF87AA25BDB1ED00D4A280 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87A925BDB1ED00D4A280 /* Endpoint.swift */; };
+		3DBF87AD25BDB2A000D4A280 /* RequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87AC25BDB2A000D4A280 /* RequestDispatcher.swift */; };
+		3DBF87B025BDB2B700D4A280 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87AF25BDB2B700D4A280 /* Request.swift */; };
+		3DBF87B325BDB2CE00D4A280 /* Request+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87B225BDB2CE00D4A280 /* Request+Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		3DBF87A125BDB0B900D4A280 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		3DBF87A625BDB17000D4A280 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		3DBF87A925BDB1ED00D4A280 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		3DBF87AC25BDB2A000D4A280 /* RequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
+		3DBF87AF25BDB2B700D4A280 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		3DBF87B225BDB2CE00D4A280 /* Request+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Endpoint.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +179,9 @@
 		3DBF879625BDAFB200D4A280 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				3DBF87AF25BDB2B700D4A280 /* Request.swift */,
+				3DBF87B225BDB2CE00D4A280 /* Request+Endpoint.swift */,
+				3DBF87AC25BDB2A000D4A280 /* RequestDispatcher.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -263,10 +272,13 @@
 			files = (
 				3DBF87AA25BDB1ED00D4A280 /* Endpoint.swift in Sources */,
 				3DBF879F25BDB09500D4A280 /* ProductsFlowFactory.swift in Sources */,
+				3DBF87AD25BDB2A000D4A280 /* RequestDispatcher.swift in Sources */,
 				3DBF87A725BDB17000D4A280 /* Environment.swift in Sources */,
 				3DBF877125BDAE3C00D4A280 /* AppDelegate.swift in Sources */,
 				3DBF87A225BDB0B900D4A280 /* AppFlowCoordinator.swift in Sources */,
+				3DBF87B325BDB2CE00D4A280 /* Request+Endpoint.swift in Sources */,
 				3DBF879C25BDB06000D4A280 /* AppFlowFactory.swift in Sources */,
+				3DBF87B025BDB2B700D4A280 /* Request.swift in Sources */,
 				3DBF877325BDAE3C00D4A280 /* AppSceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
