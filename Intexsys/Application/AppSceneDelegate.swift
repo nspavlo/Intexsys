@@ -11,6 +11,7 @@ import UIKit
 
 class SceneDelegate: UIResponder {
     var window: UIWindow?
+    var coordinator: AppFlowCoordinator?
 }
 
 // MARK: Private Methods
@@ -20,6 +21,14 @@ extension SceneDelegate {
         window?.rootViewController = navigationController
         window?.backgroundColor = .white
         window?.makeKeyAndVisible()
+    }
+
+    func setupAppFlowCoordinator(with navigationController: UINavigationController) {
+        coordinator = AppFlowCoordinator(
+            navigationController: navigationController,
+            appFlowFactory: AppFlowFactory()
+        )
+        coordinator?.start()
     }
 }
 
@@ -35,6 +44,7 @@ extension SceneDelegate: UIWindowSceneDelegate {
             .map(UIWindow.init(windowScene:))
 
         let navigationController = UINavigationController()
+        setupAppFlowCoordinator(with: navigationController)
         setupMainWindow(with: navigationController)
     }
 }
