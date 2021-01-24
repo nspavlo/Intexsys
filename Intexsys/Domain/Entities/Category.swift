@@ -7,6 +7,8 @@
 
 import Foundation
 
+typealias Categories = [Category]
+
 // MARK: Initialization
 
 struct Category {

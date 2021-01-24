@@ -27,6 +27,15 @@
 		3DBF87CE25BDB6F800D4A280 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87CD25BDB6F800D4A280 /* Product.swift */; };
 		3DBF87D225BDB90A00D4A280 /* AFRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87D125BDB90A00D4A280 /* AFRequestDispatcher.swift */; };
 		3DBF87D625BDB93C00D4A280 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF87D525BDB93C00D4A280 /* Alamofire */; };
+		3DBF87D925BDB97C00D4A280 /* CategoryContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87D825BDB97C00D4A280 /* CategoryContainerViewController.swift */; };
+		3DBF87DC25BDB9B300D4A280 /* UIViewController+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87DB25BDB9B300D4A280 /* UIViewController+Embed.swift */; };
+		3DBF87E125BDBA0A00D4A280 /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87E025BDBA0A00D4A280 /* CategoryListViewModel.swift */; };
+		3DBF87E525BDBA8700D4A280 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87E425BDBA8700D4A280 /* ProductRepository.swift */; };
+		3DBF87E825BDBAB300D4A280 /* CategoryListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87E725BDBAB300D4A280 /* CategoryListItemViewModel.swift */; };
+		3DBF87EB25BDBBB100D4A280 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87EA25BDBBB100D4A280 /* CategoryTableViewController.swift */; };
+		3DBF87EE25BDBBED00D4A280 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87ED25BDBBED00D4A280 /* CategoryTableViewCell.swift */; };
+		3DBF87F225BDBC1500D4A280 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87F125BDBC1500D4A280 /* Reusable.swift */; };
+		3DBF87F625BDBC2200D4A280 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87F525BDBC2200D4A280 /* UITableView+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +60,15 @@
 		3DBF87C425BDB64C00D4A280 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3DBF87CD25BDB6F800D4A280 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		3DBF87D125BDB90A00D4A280 /* AFRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFRequestDispatcher.swift; sourceTree = "<group>"; };
+		3DBF87D825BDB97C00D4A280 /* CategoryContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContainerViewController.swift; sourceTree = "<group>"; };
+		3DBF87DB25BDB9B300D4A280 /* UIViewController+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embed.swift"; sourceTree = "<group>"; };
+		3DBF87E025BDBA0A00D4A280 /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
+		3DBF87E425BDBA8700D4A280 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		3DBF87E725BDBAB300D4A280 /* CategoryListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListItemViewModel.swift; sourceTree = "<group>"; };
+		3DBF87EA25BDBBB100D4A280 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		3DBF87ED25BDBBED00D4A280 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		3DBF87F125BDBC1500D4A280 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3DBF87F525BDBC2200D4A280 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +197,7 @@
 		3DBF879425BDAF9A00D4A280 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				3DBF87E425BDBA8700D4A280 /* ProductRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -207,6 +226,8 @@
 		3DBF879725BDAFCB00D4A280 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				3DBF87F025BDBC0A00D4A280 /* Reusable */,
+				3DBF87DB25BDB9B300D4A280 /* UIViewController+Embed.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -241,6 +262,8 @@
 		3DBF87BE25BDB3C200D4A280 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				3DBF87DE25BDB9E600D4A280 /* View */,
+				3DBF87DF25BDB9F000D4A280 /* ViewModel */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -258,6 +281,34 @@
 				3DBF87D125BDB90A00D4A280 /* AFRequestDispatcher.swift */,
 			);
 			path = AF;
+			sourceTree = "<group>";
+		};
+		3DBF87DE25BDB9E600D4A280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF87D825BDB97C00D4A280 /* CategoryContainerViewController.swift */,
+				3DBF87EA25BDBBB100D4A280 /* CategoryTableViewController.swift */,
+				3DBF87ED25BDBBED00D4A280 /* CategoryTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DBF87DF25BDB9F000D4A280 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF87E025BDBA0A00D4A280 /* CategoryListViewModel.swift */,
+				3DBF87E725BDBAB300D4A280 /* CategoryListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DBF87F025BDBC0A00D4A280 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF87F125BDBC1500D4A280 /* Reusable.swift */,
+				3DBF87F525BDBC2200D4A280 /* UITableView+Reusable.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,8 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBF87E125BDBA0A00D4A280 /* CategoryListViewModel.swift in Sources */,
+				3DBF87DC25BDB9B300D4A280 /* UIViewController+Embed.swift in Sources */,
+				3DBF87EE25BDBBED00D4A280 /* CategoryTableViewCell.swift in Sources */,
 				3DBF87AA25BDB1ED00D4A280 /* Endpoint.swift in Sources */,
 				3DBF87BB25BDB36300D4A280 /* ErrorViewController.swift in Sources */,
+				3DBF87F625BDBC2200D4A280 /* UITableView+Reusable.swift in Sources */,
 				3DBF87CE25BDB6F800D4A280 /* Product.swift in Sources */,
 				3DBF879F25BDB09500D4A280 /* ProductsFlowFactory.swift in Sources */,
 				3DBF87B725BDB34C00D4A280 /* LoaderViewController.swift in Sources */,
@@ -345,12 +400,17 @@
 				3DBF87A725BDB17000D4A280 /* Environment.swift in Sources */,
 				3DBF877125BDAE3C00D4A280 /* AppDelegate.swift in Sources */,
 				3DBF87C125BDB43300D4A280 /* ProductsFlowCoordinator.swift in Sources */,
+				3DBF87F225BDBC1500D4A280 /* Reusable.swift in Sources */,
+				3DBF87E525BDBA8700D4A280 /* ProductRepository.swift in Sources */,
+				3DBF87E825BDBAB300D4A280 /* CategoryListItemViewModel.swift in Sources */,
 				3DBF87A225BDB0B900D4A280 /* AppFlowCoordinator.swift in Sources */,
 				3DBF87B325BDB2CE00D4A280 /* Request+Endpoint.swift in Sources */,
+				3DBF87EB25BDBBB100D4A280 /* CategoryTableViewController.swift in Sources */,
 				3DBF87D225BDB90A00D4A280 /* AFRequestDispatcher.swift in Sources */,
 				3DBF879C25BDB06000D4A280 /* AppFlowFactory.swift in Sources */,
 				3DBF87B025BDB2B700D4A280 /* Request.swift in Sources */,
 				3DBF877325BDAE3C00D4A280 /* AppSceneDelegate.swift in Sources */,
+				3DBF87D925BDB97C00D4A280 /* CategoryContainerViewController.swift in Sources */,
 				3DBF87C525BDB64C00D4A280 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
