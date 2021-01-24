@@ -42,6 +42,9 @@
 		3DBF880625BDC17900D4A280 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF880525BDC17900D4A280 /* ProductTableViewController.swift */; };
 		3DBF880925BDC1BD00D4A280 /* ProductContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF880825BDC1BD00D4A280 /* ProductContainerViewController.swift */; };
 		3DBF880E25BDC61F00D4A280 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF880D25BDC61F00D4A280 /* SDWebImage */; };
+		3DBF881425BDC8B900D4A280 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF881325BDC8B900D4A280 /* ProductViewController.swift */; };
+		3DBF881925BDC8CF00D4A280 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF881825BDC8CF00D4A280 /* ProductViewModel.swift */; };
+		3DBF881E25BDCACD00D4A280 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF881D25BDCACD00D4A280 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +83,8 @@
 		3DBF880225BDC14F00D4A280 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		3DBF880525BDC17900D4A280 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
 		3DBF880825BDC1BD00D4A280 /* ProductContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContainerViewController.swift; sourceTree = "<group>"; };
+		3DBF881325BDC8B900D4A280 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		3DBF881825BDC8CF00D4A280 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBF881E25BDCACD00D4A280 /* SnapKit in Frameworks */,
 				3DBF880E25BDC61F00D4A280 /* SDWebImage in Frameworks */,
 				3DBF87D625BDB93C00D4A280 /* Alamofire in Frameworks */,
 			);
@@ -250,6 +256,7 @@
 				3DBF87BD25BDB3B600D4A280 /* Flows */,
 				3DBF87BE25BDB3C200D4A280 /* Categories */,
 				3DBF87BF25BDB3FB00D4A280 /* Products */,
+				3DBF881025BDC88400D4A280 /* ProductDetails */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -344,6 +351,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3DBF881025BDC88400D4A280 /* ProductDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF881125BDC89E00D4A280 /* View */,
+				3DBF881225BDC8A400D4A280 /* ViewModel */,
+			);
+			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		3DBF881125BDC89E00D4A280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF881325BDC8B900D4A280 /* ProductViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DBF881225BDC8A400D4A280 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF881825BDC8CF00D4A280 /* ProductViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -363,6 +395,7 @@
 			packageProductDependencies = (
 				3DBF87D525BDB93C00D4A280 /* Alamofire */,
 				3DBF880D25BDC61F00D4A280 /* SDWebImage */,
+				3DBF881D25BDCACD00D4A280 /* SnapKit */,
 			);
 			productName = Intexsys;
 			productReference = 3DBF876D25BDAE3C00D4A280 /* Intexsys.app */;
@@ -394,6 +427,7 @@
 			packageReferences = (
 				3DBF87D425BDB93C00D4A280 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				3DBF880C25BDC61F00D4A280 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				3DBF881C25BDCACD00D4A280 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 3DBF876E25BDAE3C00D4A280 /* Products */;
 			projectDirPath = "";
@@ -433,6 +467,7 @@
 				3DBF879F25BDB09500D4A280 /* ProductsFlowFactory.swift in Sources */,
 				3DBF880325BDC14F00D4A280 /* ProductTableViewCell.swift in Sources */,
 				3DBF87B725BDB34C00D4A280 /* LoaderViewController.swift in Sources */,
+				3DBF881425BDC8B900D4A280 /* ProductViewController.swift in Sources */,
 				3DBF87AD25BDB2A000D4A280 /* RequestDispatcher.swift in Sources */,
 				3DBF87A725BDB17000D4A280 /* Environment.swift in Sources */,
 				3DBF877125BDAE3C00D4A280 /* AppDelegate.swift in Sources */,
@@ -451,6 +486,7 @@
 				3DBF877325BDAE3C00D4A280 /* AppSceneDelegate.swift in Sources */,
 				3DBF87D925BDB97C00D4A280 /* CategoryContainerViewController.swift in Sources */,
 				3DBF87C525BDB64C00D4A280 /* Category.swift in Sources */,
+				3DBF881925BDC8CF00D4A280 /* ProductViewModel.swift in Sources */,
 				3DBF880625BDC17900D4A280 /* ProductTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,6 +703,14 @@
 				minimumVersion = 5.10.3;
 			};
 		};
+		3DBF881C25BDCACD00D4A280 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -679,6 +723,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DBF880C25BDC61F00D4A280 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		3DBF881D25BDCACD00D4A280 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DBF881C25BDCACD00D4A280 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
