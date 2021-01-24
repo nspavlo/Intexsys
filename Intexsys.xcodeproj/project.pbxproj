@@ -16,6 +16,7 @@
 		3DBF879F25BDB09500D4A280 /* ProductsFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF879E25BDB09500D4A280 /* ProductsFlowFactory.swift */; };
 		3DBF87A225BDB0B900D4A280 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87A125BDB0B900D4A280 /* AppFlowCoordinator.swift */; };
 		3DBF87A725BDB17000D4A280 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87A625BDB17000D4A280 /* Environment.swift */; };
+		3DBF87AA25BDB1ED00D4A280 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87A925BDB1ED00D4A280 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3DBF879E25BDB09500D4A280 /* ProductsFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsFlowFactory.swift; sourceTree = "<group>"; };
 		3DBF87A125BDB0B900D4A280 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		3DBF87A625BDB17000D4A280 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		3DBF87A925BDB1ED00D4A280 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			children = (
 				3DBF879625BDAFB200D4A280 /* Request */,
 				3DBF87A625BDB17000D4A280 /* Environment.swift */,
+				3DBF87A925BDB1ED00D4A280 /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBF87AA25BDB1ED00D4A280 /* Endpoint.swift in Sources */,
 				3DBF879F25BDB09500D4A280 /* ProductsFlowFactory.swift in Sources */,
 				3DBF87A725BDB17000D4A280 /* Environment.swift in Sources */,
 				3DBF877125BDAE3C00D4A280 /* AppDelegate.swift in Sources */,
