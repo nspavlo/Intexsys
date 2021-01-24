@@ -47,12 +47,9 @@ private extension ProductViewController {
         }
 
         let imageView = UIImageView()
-        imageView.sd_setImage(with: viewModel.imageURL, placeholderImage: UIImage(named: "placeholder"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.sd_setImage(with: viewModel.imageURL, placeholderImage: UIImage())
         stackView.addArrangedSubview(imageView)
-        imageView.snp.makeConstraints { make in
-            make.size.equalTo(CGSize(width: 365, height: 240))
-
-        }
 
         stackView.addArrangedSubview(createTitleLabel())
         stackView.addArrangedSubview(createDescriptionLabel())

@@ -10,8 +10,10 @@ import UIKit
 // MARK: Initialization
 
 final class ProductTableViewController: UITableViewController {
-    let items: ProductListItemViewModels
     var didSelectItem: ((IndexPath) -> Void)?
+    var didLoadNextPage: (() -> Void)?
+
+    private var items: ProductListItemViewModels
 
     init(items: ProductListItemViewModels) {
         self.items = items
@@ -32,6 +34,15 @@ final class ProductTableViewController: UITableViewController {
     }
 }
 
+// MARK: Public Methods
+
+extension ProductTableViewController {
+    func reload(with items: ProductListItemViewModels) {
+        self.items = items
+        tableView.reloadData()
+    }
+}
+
 // MARK: UITableViewDataSource, UITableViewDelegate
 
 extension ProductTableViewController {
@@ -43,6 +54,12 @@ extension ProductTableViewController {
         let cell = tableView.dequeueReusableCell(for: indexPath) as ProductTableViewCell
         cell.configure(with: items[indexPath.row])
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == items.count - 1 {
+            didLoadNextPage?()
+        }
     }
 
     override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {

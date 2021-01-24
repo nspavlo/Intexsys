@@ -37,10 +37,14 @@ extension Product {
     }
 
     struct NetworkResponse: Decodable {
-        var grid: Grid
+        let grid: Grid
+        let size: Int
+        let total: Int
 
         enum CodingKeys: String, CodingKey {
             case grid = "gridProducts"
+            case size = "grid_size"
+            case total
         }
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 
 final class ProductContainerViewController: UIViewController {
     private let viewModel: ProductListViewModel
+    private weak var productTableViewController: ProductTableViewController?
 
     init(viewModel: ProductListViewModel) {
         self.viewModel = viewModel
@@ -55,9 +56,16 @@ private extension ProductContainerViewController {
             let viewController = LoaderViewController()
             replaceExisting(with: viewController, in: view)
         case .result(.success(let items)):
-            let viewController = ProductTableViewController(items: items)
-            viewController.didSelectItem = viewModel.didSelectItem(at:)
-            replaceExisting(with: viewController, in: view)
+            if let productTableViewController = productTableViewController {
+                productTableViewController.reload(with: items)
+            } else {
+                let viewController = ProductTableViewController(items: items)
+                viewController.didSelectItem = viewModel.didSelectItem(at:)
+                viewController.didLoadNextPage = viewModel.didLoadNextPage
+                replaceExisting(with: viewController, in: view)
+
+                productTableViewController = viewController
+            }
         case .result(.failure(let error)):
             let viewController = ErrorViewController(error: error)
             replaceExisting(with: viewController, in: view)

@@ -11,6 +11,7 @@ import Foundation
 
 protocol ProductListViewModelInput {
     func viewDidLoad()
+    func didLoadNextPage()
     func didSelectItem(at indexPath: IndexPath)
 }
 
@@ -37,6 +38,9 @@ final class ProductListController: ProductListViewModel {
     var changeState: ((ProductListViewModelState) -> Void)?
     var showProductDetails: ((Product) -> Void)?
 
+
+    private var page = 1
+    private var hasMorePages = false
     private var items: [ProductListItemViewModel] = []
     private var products: Products = []
     private let category: Category
@@ -53,15 +57,31 @@ final class ProductListController: ProductListViewModel {
 extension ProductListController {
     func viewDidLoad() {
         changeState?(.loading)
+        load(page: page)
+    }
 
-        repository.fetchProducts(for: category) { [weak self] result in
+    func didLoadNextPage() {
+        guard hasMorePages else { return }
+
+        page += 1
+        load(page: page)
+    }
+
+    func didSelectItem(at indexPath: IndexPath) {
+        showProductDetails?(products[indexPath.row])
+    }
+}
+
+// MARK: Private Methods
+
+private extension ProductListController {
+    func load(page: Int) {
+        repository.fetchProducts(for: category, page: page) { [weak self] result in
             guard let self = self else { return }
 
             switch result {
             case .success(let response):
-                let products = response.grid.elements
-                self.products = products
-                self.items = products.map(ProductListItemViewModel.init(_:))
+                self.appendNewPage(from: response)
                 self.changeState?(.result(.success(self.items)))
             case .failure(let error):
                 self.changeState?(.result(.failure(error)))
@@ -69,7 +89,18 @@ extension ProductListController {
         }
     }
 
-    func didSelectItem(at indexPath: IndexPath) {
-        showProductDetails?(products[indexPath.row])
+    func appendNewPage(from response: Product.NetworkResponse) {
+        hasMorePages = hasMorePages(with: response)
+        products.append(contentsOf: response.grid.elements)
+        items = products.map(ProductListItemViewModel.init(_:))
+    }
+
+
+    func isFirstPage() -> Bool {
+        page == 1
+    }
+
+    func hasMorePages(with response: Product.NetworkResponse) -> Bool {
+        response.total % (response.size * page + 1) == 1
     }
 }

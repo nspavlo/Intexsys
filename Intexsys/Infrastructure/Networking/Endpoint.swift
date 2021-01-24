@@ -11,7 +11,7 @@ import Foundation
 
 enum Endpoint {
     case categories
-    case products(category: Category)
+    case products(category: Category, page: Int)
 }
 
 // MARK: -
@@ -25,8 +25,8 @@ extension Endpoint {
         switch self {
         case .categories:
             return "/api/\(version)/categories"
-        case .products(let category):
-            return "/iv-api/\(version)/catalog/\(category.url)/products?_iv_include=gridProducts"
+        case .products(let category, let page):
+            return "/iv-api/\(version)/catalog/\(category.url)/products?_iv_include=gridProducts&_iv_page=\(page)"
         }
     }
 }
