@@ -36,7 +36,7 @@ extension ProductController {
     }
 
     var imageURL: URL? {
-        URL(string: "https://op1.0ps.us/365-240-ffffff/\(product.primaryImage).jpg")
+        URL(string: "\(Environment.images.path)/365-240-ffffff/\(product.primaryImage).jpg")
     }
 
     var price: String {

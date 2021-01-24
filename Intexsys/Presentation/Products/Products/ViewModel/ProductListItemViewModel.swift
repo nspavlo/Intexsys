@@ -23,6 +23,6 @@ extension ProductListItemViewModel {
     init(_ product: Product) {
         self.title = product.name
         self.price = "\(product.price)"
-        self.imageURL = URL(string: "https://op1.0ps.us/120-90-ffffff/\(product.primaryImage).jpg")
+        self.imageURL = URL(string: "\(Environment.images.path)/120-90-ffffff/\(product.primaryImage).jpg")
     }
 }

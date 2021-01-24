@@ -15,4 +15,5 @@ enum Environment: String {
     }
 
     case development = "www.opticsplanet.com"
+    case images = "op1.0ps.us"
 }
