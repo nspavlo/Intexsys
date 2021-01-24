@@ -94,7 +94,6 @@ private extension ProductListController {
         items = products.map(ProductListItemViewModel.init(_:))
     }
 
-
     func isFirstPage() -> Bool {
         page == 1
     }

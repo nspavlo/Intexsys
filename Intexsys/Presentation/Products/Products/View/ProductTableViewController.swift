@@ -56,7 +56,11 @@ extension ProductTableViewController {
         return cell
     }
 
-    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    override func tableView(
+        _ tableView: UITableView,
+        willDisplay cell: UITableViewCell,
+        forRowAt indexPath: IndexPath)
+    {
         if indexPath.row == items.count - 1 {
             didLoadNextPage?()
         }

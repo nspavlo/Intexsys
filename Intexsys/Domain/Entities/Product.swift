@@ -31,6 +31,7 @@ extension Product: Decodable {
 
 // MARK: Network Container
 
+// swiftlint:disable nesting
 extension Product {
     struct Grid: Decodable {
         let elements: Products
