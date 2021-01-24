@@ -94,16 +94,16 @@ extension RemoteProductRepository: ProductRepository {
     func fetchProducts(
         for category: Category,
         page: Int,
-        with completion: @escaping (Result<Product.Response, Error>) -> Void)
-    {
+        with completion: @escaping (Result<Product.Response, Error>) -> Void
+    ) {
         let request = Request(method: .get, endpoint: .products(category: category, page: page), params: nil)
         dispatcher.execute(request, completion: completion)
     }
 
     func fetchLargeProduct(
         for product: Product,
-        with completion: @escaping (Result<ProductDescription, Error>) -> Void)
-    {
+        with completion: @escaping (Result<ProductDescription, Error>) -> Void
+    ) {
         let request = Request(method: .get, endpoint: .product(product: product), params: nil)
         dispatcher.execute(request, completion: completion)
     }
