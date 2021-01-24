@@ -15,26 +15,32 @@ struct Product {
     let name: String
     let url: String
     let price: Double
+    let primaryImage: String
 }
 
 // MARK: Codable
 
-extension Product: Codable {
+extension Product: Decodable {
     enum CodingKeys: String, CodingKey {
         case name = "shortName"
         case url
         case price
+        case primaryImage
     }
 }
 
 // MARK: Network Container
 
 extension Product {
-    struct GridProducts: Decodable {
+    struct Grid: Decodable {
         let elements: Products
     }
 
-    struct ProductNetworkResponse: Decodable {
-        var gridProducts: GridProducts
+    struct NetworkResponse: Decodable {
+        var grid: Grid
+
+        enum CodingKeys: String, CodingKey {
+            case grid = "gridProducts"
+        }
     }
 }

@@ -11,7 +11,7 @@ import Foundation
 
 enum Environment: String {
     var path: String {
-        "https://\(self.rawValue)/api/0.5"
+        "https://\(self.rawValue)"
     }
 
     case development = "www.opticsplanet.com"

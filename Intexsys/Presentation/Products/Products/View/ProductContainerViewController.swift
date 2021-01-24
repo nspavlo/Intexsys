@@ -1,5 +1,5 @@
 //
-//  CategoryContainerViewController.swift
+//  ProductContainerViewController.swift
 //  Intexsys
 //
 //  Created by Jans Pavlovs on 24/01/2021.
@@ -9,10 +9,10 @@ import UIKit
 
 // MARK: Initialization
 
-final class CategoryContainerViewController: UIViewController {
-    private let viewModel: CategoryListViewModel
+final class ProductContainerViewController: UIViewController {
+    private let viewModel: ProductListViewModel
 
-    init(viewModel: CategoryListViewModel) {
+    init(viewModel: ProductListViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,7 +32,7 @@ final class CategoryContainerViewController: UIViewController {
 
 // MARK: Private Methods
 
-private extension CategoryContainerViewController {
+private extension ProductContainerViewController {
     func setup() {
         setupUI()
         setupBindings()
@@ -49,13 +49,13 @@ private extension CategoryContainerViewController {
         }
     }
 
-    func render(_ state: CategoryListViewModelState) {
+    func render(_ state: ProductListViewModelState) {
         switch state {
         case .loading:
             let viewController = LoaderViewController()
             replaceExisting(with: viewController, in: view)
         case .result(.success(let items)):
-            let viewController = CategoryTableViewController(items: items)
+            let viewController = ProductTableViewController(items: items)
             viewController.didSelectItem = viewModel.didSelectItem(at:)
             replaceExisting(with: viewController, in: view)
         case .result(.failure(let error)):
@@ -70,5 +70,5 @@ private extension CategoryContainerViewController {
 private typealias Locale = String
 
 private extension Locale {
-    static let navigationBarTitle = "Categories"
+    static let navigationBarTitle = "Products"
 }

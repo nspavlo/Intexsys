@@ -18,7 +18,7 @@ struct Category {
 
 // MARK: Codable
 
-extension Category: Codable {
+extension Category: Decodable {
     enum CodingKeys: String, CodingKey {
         case name = "short_name"
         case url

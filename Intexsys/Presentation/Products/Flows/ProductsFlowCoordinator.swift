@@ -39,5 +39,15 @@ extension ProductsFlowCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: animated)
     }
 
-    private func showProduct(with _: Category, animated: Bool) {}
+    private func showProduct(with category: Category, animated: Bool) {
+        let repository = productsFlowFactory.createProductRepository()
+        let viewModel = ProductListController(category: category, repository: repository)
+        viewModel.showProductDetails = { product in
+            self.showProductDetails(with: product, animated: true)
+        }
+        let viewController = ProductContainerViewController(viewModel: viewModel)
+        navigationController.pushViewController(viewController, animated: animated)
+    }
+
+    private func showProductDetails(with _: Product, animated _: Bool) {}
 }

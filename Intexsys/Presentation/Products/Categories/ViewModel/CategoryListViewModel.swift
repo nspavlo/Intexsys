@@ -90,4 +90,9 @@ extension RemoteProductRepository: ProductRepository {
         let request = Request(method: .get, endpoint: .categories, params: nil)
         dispatcher.execute(request, completion: completion)
     }
+
+    func fetchProducts(for category: Category, with completion: @escaping (Result<Product.NetworkResponse, Error>) -> Void) {
+        let request = Request(method: .get, endpoint: .products(category: category), params: nil)
+        dispatcher.execute(request, completion: completion)
+    }
 }

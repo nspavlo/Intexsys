@@ -36,6 +36,12 @@
 		3DBF87EE25BDBBED00D4A280 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87ED25BDBBED00D4A280 /* CategoryTableViewCell.swift */; };
 		3DBF87F225BDBC1500D4A280 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87F125BDBC1500D4A280 /* Reusable.swift */; };
 		3DBF87F625BDBC2200D4A280 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87F525BDBC2200D4A280 /* UITableView+Reusable.swift */; };
+		3DBF87FC25BDC00D00D4A280 /* ProductListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87FB25BDC00D00D4A280 /* ProductListItemViewModel.swift */; };
+		3DBF880025BDC03E00D4A280 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87FF25BDC03E00D4A280 /* ProductListViewModel.swift */; };
+		3DBF880325BDC14F00D4A280 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF880225BDC14F00D4A280 /* ProductTableViewCell.swift */; };
+		3DBF880625BDC17900D4A280 /* ProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF880525BDC17900D4A280 /* ProductTableViewController.swift */; };
+		3DBF880925BDC1BD00D4A280 /* ProductContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF880825BDC1BD00D4A280 /* ProductContainerViewController.swift */; };
+		3DBF880E25BDC61F00D4A280 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF880D25BDC61F00D4A280 /* SDWebImage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +75,11 @@
 		3DBF87ED25BDBBED00D4A280 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		3DBF87F125BDBC1500D4A280 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3DBF87F525BDBC2200D4A280 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		3DBF87FB25BDC00D00D4A280 /* ProductListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListItemViewModel.swift; sourceTree = "<group>"; };
+		3DBF87FF25BDC03E00D4A280 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		3DBF880225BDC14F00D4A280 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		3DBF880525BDC17900D4A280 /* ProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewController.swift; sourceTree = "<group>"; };
+		3DBF880825BDC1BD00D4A280 /* ProductContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContainerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBF880E25BDC61F00D4A280 /* SDWebImage in Frameworks */,
 				3DBF87D625BDB93C00D4A280 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +283,8 @@
 		3DBF87BF25BDB3FB00D4A280 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				3DBF87F925BDBFEF00D4A280 /* View */,
+				3DBF87FA25BDBFF400D4A280 /* ViewModel */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -311,6 +325,25 @@
 			path = Reusable;
 			sourceTree = "<group>";
 		};
+		3DBF87F925BDBFEF00D4A280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF880825BDC1BD00D4A280 /* ProductContainerViewController.swift */,
+				3DBF880225BDC14F00D4A280 /* ProductTableViewCell.swift */,
+				3DBF880525BDC17900D4A280 /* ProductTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DBF87FA25BDBFF400D4A280 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF87FB25BDC00D00D4A280 /* ProductListItemViewModel.swift */,
+				3DBF87FF25BDC03E00D4A280 /* ProductListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +362,7 @@
 			name = Intexsys;
 			packageProductDependencies = (
 				3DBF87D525BDB93C00D4A280 /* Alamofire */,
+				3DBF880D25BDC61F00D4A280 /* SDWebImage */,
 			);
 			productName = Intexsys;
 			productReference = 3DBF876D25BDAE3C00D4A280 /* Intexsys.app */;
@@ -359,6 +393,7 @@
 			mainGroup = 3DBF876425BDAE3C00D4A280;
 			packageReferences = (
 				3DBF87D425BDB93C00D4A280 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3DBF880C25BDC61F00D4A280 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 3DBF876E25BDAE3C00D4A280 /* Products */;
 			projectDirPath = "";
@@ -394,14 +429,18 @@
 				3DBF87BB25BDB36300D4A280 /* ErrorViewController.swift in Sources */,
 				3DBF87F625BDBC2200D4A280 /* UITableView+Reusable.swift in Sources */,
 				3DBF87CE25BDB6F800D4A280 /* Product.swift in Sources */,
+				3DBF87FC25BDC00D00D4A280 /* ProductListItemViewModel.swift in Sources */,
 				3DBF879F25BDB09500D4A280 /* ProductsFlowFactory.swift in Sources */,
+				3DBF880325BDC14F00D4A280 /* ProductTableViewCell.swift in Sources */,
 				3DBF87B725BDB34C00D4A280 /* LoaderViewController.swift in Sources */,
 				3DBF87AD25BDB2A000D4A280 /* RequestDispatcher.swift in Sources */,
 				3DBF87A725BDB17000D4A280 /* Environment.swift in Sources */,
 				3DBF877125BDAE3C00D4A280 /* AppDelegate.swift in Sources */,
 				3DBF87C125BDB43300D4A280 /* ProductsFlowCoordinator.swift in Sources */,
+				3DBF880025BDC03E00D4A280 /* ProductListViewModel.swift in Sources */,
 				3DBF87F225BDBC1500D4A280 /* Reusable.swift in Sources */,
 				3DBF87E525BDBA8700D4A280 /* ProductRepository.swift in Sources */,
+				3DBF880925BDC1BD00D4A280 /* ProductContainerViewController.swift in Sources */,
 				3DBF87E825BDBAB300D4A280 /* CategoryListItemViewModel.swift in Sources */,
 				3DBF87A225BDB0B900D4A280 /* AppFlowCoordinator.swift in Sources */,
 				3DBF87B325BDB2CE00D4A280 /* Request+Endpoint.swift in Sources */,
@@ -412,6 +451,7 @@
 				3DBF877325BDAE3C00D4A280 /* AppSceneDelegate.swift in Sources */,
 				3DBF87D925BDB97C00D4A280 /* CategoryContainerViewController.swift in Sources */,
 				3DBF87C525BDB64C00D4A280 /* Category.swift in Sources */,
+				3DBF880625BDC17900D4A280 /* ProductTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +659,14 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		3DBF880C25BDC61F00D4A280 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -626,6 +674,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DBF87D425BDB93C00D4A280 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		3DBF880D25BDC61F00D4A280 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DBF880C25BDC61F00D4A280 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

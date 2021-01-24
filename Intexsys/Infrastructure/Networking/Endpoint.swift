@@ -11,8 +11,7 @@ import Foundation
 
 enum Endpoint {
     case categories
-    // TOTO: Remove loose type
-    case products(category: String)
+    case products(category: Category)
 }
 
 // MARK: -
@@ -21,9 +20,9 @@ extension Endpoint {
     func path() -> String {
         switch self {
         case .categories:
-            return "/categories"
+            return "/api/0.5/categories"
         case .products(let category):
-            return "/catalog/\(category)/products?_iv_include=gridProducts"
+            return "/iv-api/0.5/catalog/\(category.url)/products?_iv_include=gridProducts"
         }
     }
 }
