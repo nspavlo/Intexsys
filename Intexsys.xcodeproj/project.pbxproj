@@ -45,6 +45,7 @@
 		3DBF881425BDC8B900D4A280 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF881325BDC8B900D4A280 /* ProductViewController.swift */; };
 		3DBF881925BDC8CF00D4A280 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF881825BDC8CF00D4A280 /* ProductViewModel.swift */; };
 		3DBF881E25BDCACD00D4A280 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF881D25BDCACD00D4A280 /* SnapKit */; };
+		3DBF882125BDE46C00D4A280 /* ProductDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF882025BDE46C00D4A280 /* ProductDescription.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		3DBF880825BDC1BD00D4A280 /* ProductContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContainerViewController.swift; sourceTree = "<group>"; };
 		3DBF881325BDC8B900D4A280 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		3DBF881825BDC8CF00D4A280 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		3DBF882025BDE46C00D4A280 /* ProductDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +202,7 @@
 			children = (
 				3DBF87C425BDB64C00D4A280 /* Category.swift */,
 				3DBF87CD25BDB6F800D4A280 /* Product.swift */,
+				3DBF882025BDE46C00D4A280 /* ProductDescription.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				3DBF87EB25BDBBB100D4A280 /* CategoryTableViewController.swift in Sources */,
 				3DBF87D225BDB90A00D4A280 /* AFRequestDispatcher.swift in Sources */,
 				3DBF879C25BDB06000D4A280 /* AppFlowFactory.swift in Sources */,
+				3DBF882125BDE46C00D4A280 /* ProductDescription.swift in Sources */,
 				3DBF87B025BDB2B700D4A280 /* Request.swift in Sources */,
 				3DBF877325BDAE3C00D4A280 /* AppSceneDelegate.swift in Sources */,
 				3DBF87D925BDB97C00D4A280 /* CategoryContainerViewController.swift in Sources */,

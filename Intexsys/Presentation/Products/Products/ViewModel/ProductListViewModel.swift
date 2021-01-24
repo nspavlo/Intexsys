@@ -38,7 +38,6 @@ final class ProductListController: ProductListViewModel {
     var changeState: ((ProductListViewModelState) -> Void)?
     var showProductDetails: ((Product) -> Void)?
 
-
     private var page = 1
     private var hasMorePages = false
     private var items: [ProductListItemViewModel] = []
@@ -89,7 +88,7 @@ private extension ProductListController {
         }
     }
 
-    func appendNewPage(from response: Product.NetworkResponse) {
+    func appendNewPage(from response: Product.Response) {
         hasMorePages = hasMorePages(with: response)
         products.append(contentsOf: response.grid.elements)
         items = products.map(ProductListItemViewModel.init(_:))
@@ -100,7 +99,7 @@ private extension ProductListController {
         page == 1
     }
 
-    func hasMorePages(with response: Product.NetworkResponse) -> Bool {
+    func hasMorePages(with response: Product.Response) -> Bool {
         response.total % (response.size * page + 1) == 1
     }
 }

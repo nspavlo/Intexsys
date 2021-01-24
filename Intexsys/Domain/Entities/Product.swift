@@ -36,7 +36,7 @@ extension Product {
         let elements: Products
     }
 
-    struct NetworkResponse: Decodable {
+    struct Response: Decodable {
         let grid: Grid
         let size: Int
         let total: Int

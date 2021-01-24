@@ -12,6 +12,11 @@ import SDWebImage
 // MARK: Initialization
 
 final class ProductViewController: UIViewController {
+    private let scrollView = UIScrollView()
+    private let stackView = UIStackView()
+    private let imageView = UIImageView()
+    private let titleLabel = UILabel()
+    private let descriptionLabel = UILabel()
     private let viewModel: ProductViewModel
 
     init(viewModel: ProductViewModel) {
@@ -28,6 +33,7 @@ final class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        viewModel.viewDidLoad()
     }
 }
 
@@ -35,37 +41,70 @@ final class ProductViewController: UIViewController {
 
 private extension ProductViewController {
     func setup() {
-        title = "NAME"
+        setupUI()
+        setupBindings()
+    }
+
+    func setupBindings() {
+        viewModel.changeState = { [weak self] _ in
+            self?.update()
+        }
+    }
+
+    func setupUI() {
+        title = viewModel.name
         view.backgroundColor = .white
 
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        view.addSubview(stackView)
-        stackView.snp.makeConstraints { make in
-            make.centerY.equalToSuperview()
-            make.left.right.equalToSuperview().inset(16)
+        setupScrollView()
+        setupStackView()
+        setupImageView()
+        setupTitleLabel()
+        setupDescriptionLabel()
+    }
+
+    func setupScrollView() {
+        view.addSubview(scrollView)
+        setupScrollViewConstraints()
+    }
+
+    func setupScrollViewConstraints() {
+        scrollView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
         }
+    }
 
-        let imageView = UIImageView()
+    func setupStackView() {
+        stackView.axis = .vertical
+        stackView.spacing = 16
+        scrollView.addSubview(stackView)
+        setupStackViewConstraints()
+    }
+
+    func setupStackViewConstraints() {
+        stackView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(16)
+            make.width.equalTo(view).inset(16)
+        }
+    }
+
+    func setupImageView() {
         imageView.contentMode = .scaleAspectFit
-        imageView.sd_setImage(with: viewModel.imageURL, placeholderImage: UIImage())
         stackView.addArrangedSubview(imageView)
-
-        stackView.addArrangedSubview(createTitleLabel())
-        stackView.addArrangedSubview(createDescriptionLabel())
     }
 
-    func createTitleLabel() -> UILabel {
-        let label = UILabel()
-        label.text = viewModel.name
-        label.numberOfLines = 0
-        return label
+    func setupTitleLabel() {
+        titleLabel.numberOfLines = 0
+        stackView.addArrangedSubview(titleLabel)
     }
 
-    func createDescriptionLabel() -> UILabel {
-        let label = UILabel()
-        label.text = viewModel.description
-        label.numberOfLines = 0
-        return label
+    func setupDescriptionLabel() {
+        descriptionLabel.numberOfLines = 0
+        stackView.addArrangedSubview(descriptionLabel)
+    }
+
+    func update() {
+        imageView.sd_setImage(with: viewModel.imageURL, placeholderImage: UIImage())
+        titleLabel.text = viewModel.name
+        descriptionLabel.text = viewModel.description
     }
 }

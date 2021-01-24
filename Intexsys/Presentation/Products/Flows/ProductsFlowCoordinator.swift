@@ -50,7 +50,8 @@ extension ProductsFlowCoordinator: Coordinator {
     }
 
     private func showProductDetails(with product: Product, animated: Bool) {
-        let viewModel = ProductController(product: product)
+        let repository = productsFlowFactory.createProductRepository()
+        let viewModel = ProductController(product: product, repository: repository)
         let viewController = ProductViewController(viewModel: viewModel)
         navigationController.pushViewController(viewController, animated: animated)
     }
