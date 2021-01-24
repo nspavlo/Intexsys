@@ -23,6 +23,8 @@
 		3DBF87B725BDB34C00D4A280 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87B625BDB34C00D4A280 /* LoaderViewController.swift */; };
 		3DBF87BB25BDB36300D4A280 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87BA25BDB36300D4A280 /* ErrorViewController.swift */; };
 		3DBF87C125BDB43300D4A280 /* ProductsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87C025BDB43300D4A280 /* ProductsFlowCoordinator.swift */; };
+		3DBF87C525BDB64C00D4A280 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87C425BDB64C00D4A280 /* Category.swift */; };
+		3DBF87CE25BDB6F800D4A280 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF87CD25BDB6F800D4A280 /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		3DBF87B625BDB34C00D4A280 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
 		3DBF87BA25BDB36300D4A280 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		3DBF87C025BDB43300D4A280 /* ProductsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsFlowCoordinator.swift; sourceTree = "<group>"; };
+		3DBF87C425BDB64C00D4A280 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		3DBF87CD25BDB6F800D4A280 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +158,8 @@
 		3DBF879225BDAF8600D4A280 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				3DBF87C425BDB64C00D4A280 /* Category.swift */,
+				3DBF87CD25BDB6F800D4A280 /* Product.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 			files = (
 				3DBF87AA25BDB1ED00D4A280 /* Endpoint.swift in Sources */,
 				3DBF87BB25BDB36300D4A280 /* ErrorViewController.swift in Sources */,
+				3DBF87CE25BDB6F800D4A280 /* Product.swift in Sources */,
 				3DBF879F25BDB09500D4A280 /* ProductsFlowFactory.swift in Sources */,
 				3DBF87B725BDB34C00D4A280 /* LoaderViewController.swift in Sources */,
 				3DBF87AD25BDB2A000D4A280 /* RequestDispatcher.swift in Sources */,
@@ -324,6 +331,7 @@
 				3DBF879C25BDB06000D4A280 /* AppFlowFactory.swift in Sources */,
 				3DBF87B025BDB2B700D4A280 /* Request.swift in Sources */,
 				3DBF877325BDAE3C00D4A280 /* AppSceneDelegate.swift in Sources */,
+				3DBF87C525BDB64C00D4A280 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
