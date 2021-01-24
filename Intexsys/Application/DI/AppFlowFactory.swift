@@ -10,3 +10,11 @@ import Foundation
 // MARK: Initialization
 
 final class AppFlowFactory {}
+
+// MARK: -
+
+extension AppFlowFactory {
+    func createProductsFlowFactory() -> ProductsFlowFactory {
+        ProductsFlowFactory()
+    }
+}

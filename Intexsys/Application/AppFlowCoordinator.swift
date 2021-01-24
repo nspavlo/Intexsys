@@ -30,5 +30,9 @@ final class AppFlowCoordinator {
 // MARK: Coordinator
 
 extension AppFlowCoordinator: Coordinator {
-    func start() {}
+    func start() {
+        let productsFlowFactory = appFlowFactory.createProductsFlowFactory()
+        let coordinator = productsFlowFactory.createProductsFlowCoordinator(with: navigationController)
+        coordinator.start()
+    }
 }
