@@ -40,7 +40,7 @@ final class ProductController: ProductViewModel {
     var changeState: ((ProductViewModelState) -> Void)?
 
     private let product: Product
-    private var productDscription: ProductDescription?
+    private var productDescription: ProductDescription?
     private let repository: ProductRepository
 
     init(product: Product, repository: ProductRepository) {
@@ -65,7 +65,7 @@ extension ProductController {
     }
 
     var description: String {
-        productDscription?.description ?? ""
+        productDescription?.description ?? ""
     }
 }
 
@@ -78,7 +78,7 @@ extension ProductController {
         repository.fetchLargeProduct(for: product) { [weak self] result in
             switch result {
             case .success(let response):
-                self?.productDscription = response
+                self?.productDescription = response
                 self?.changeState?(.result(.success(response)))
             case .failure(let error):
                 self?.changeState?(.result(.failure(error)))
