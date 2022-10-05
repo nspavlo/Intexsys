@@ -21,7 +21,7 @@ final class AFRequestDispatcher {
 
 extension AFRequestDispatcher: RequestDispatcher {
     func execute<T>(_ request: Request, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
-        // WARN: Add client authentication key `x-apikey`
+        #warning("Add client authentication key `x-apikey`")
         let dictionary: [String: String] = [:]
 
         AF
