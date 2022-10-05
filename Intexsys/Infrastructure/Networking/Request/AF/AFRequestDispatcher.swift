@@ -21,10 +21,8 @@ final class AFRequestDispatcher {
 
 extension AFRequestDispatcher: RequestDispatcher {
     func execute<T>(_ request: Request, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
-        let dictionary = [
-            "x-apikey:": "58a12ef1e09a105d95e19f6a5399de6174198b4cbb228365d0c2f8601487"
-                + "fe070346a4905c6cb06f4347b7c6b5a224d592afb88b96c700b400bf5d72be6bfc77"
-        ]
+        // WARN: Add client authentication key `x-apikey`
+        let dictionary: [String: String] = [:]
 
         AF
         .request(
