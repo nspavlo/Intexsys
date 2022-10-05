@@ -13,7 +13,7 @@ struct ProductDescription {
     let description: String
 }
 
-// MARK: Codable
+// MARK: Decodable
 
 extension ProductDescription: Decodable {
     enum CodingKeys: String, CodingKey {

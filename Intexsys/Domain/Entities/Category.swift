@@ -16,7 +16,7 @@ struct Category {
     let url: String
 }
 
-// MARK: Codable
+// MARK: Decodable
 
 extension Category: Decodable {
     enum CodingKeys: String, CodingKey {

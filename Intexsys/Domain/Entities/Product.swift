@@ -18,7 +18,7 @@ struct Product {
     let primaryImage: String
 }
 
-// MARK: Codable
+// MARK: Decodable
 
 extension Product: Decodable {
     enum CodingKeys: String, CodingKey {
