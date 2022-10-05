@@ -9,7 +9,8 @@ import Foundation
 
 protocol ProductRepository {
     func fetchCategories(
-        with completion: @escaping (Result<Categories, Error>) -> Void)
+        with completion: @escaping (Result<Categories, Error>) -> Void
+    )
 
     func fetchProducts(
         for category: Category,

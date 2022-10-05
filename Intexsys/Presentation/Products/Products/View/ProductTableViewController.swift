@@ -60,8 +60,7 @@ extension ProductTableViewController {
         _: UITableView,
         willDisplay _: UITableViewCell,
         forRowAt indexPath: IndexPath
-    )
-    {
+    ) {
         if indexPath.row == items.count - 1 {
             didLoadNextPage?()
         }
