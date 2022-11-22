@@ -94,10 +94,6 @@ private extension ProductListController {
         items = products.map(ProductListItemViewModel.init(_:))
     }
 
-    func isFirstPage() -> Bool {
-        page == 1
-    }
-
     func hasMorePages(with response: Product.Response) -> Bool {
         response.total % (response.size * page + 1) == 1
     }
